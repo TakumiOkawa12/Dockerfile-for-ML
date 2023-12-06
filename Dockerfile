@@ -10,6 +10,8 @@ RUN wget https://repo.anaconda.com/archive/Anaconda3-2023.09-0-Linux-x86_64.sh &
 
 ENV PATH /opt/anaconda3/bin:$PATH
 
+RUN conda install -y lightgbm
+
 RUN pip install --upgrade pip
 WORKDIR /
 CMD ["jupyter","lab","--ip=0.0.0.0", "--allow-root", "--LabApp.token=''"]

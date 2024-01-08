@@ -18,7 +18,7 @@ ENV PATH /opt/anaconda3/bin:$PATH
 EXPOSE 8888
 
 RUN pip install --upgrade pip && \
-	pip install scikit-learn==1.2.2 && \
+	pip install -- upgrade scikit-learn && \
     # pip install nibabel && \ # 神経画像データを扱うためのライブラリ
 	pip install --upgrade plotly && \
     # plotlyグラフをオンラインで保存し、共有するためのライブラリ

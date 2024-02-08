@@ -1,0 +1,24 @@
+# data analysis / machine learning
+numpy
+scipy
+pandas
+scikit-learn
+xgboost
+lightgbm
+
+# visualization
+matplotlib
+seaborn
+plotly
+
+
+# google
+pandas-gbq
+google-cloud-bigquery[bgstorage,pandas]
+google-api-python-client
+oauth2client
+
+# jupyter
+jupyterlab
+ipywidgets
+widgetsnbextension

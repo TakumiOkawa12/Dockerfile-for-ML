@@ -1,4 +1,4 @@
-FROM nvidia/cuda:12.3.1-devel-ubuntu20.04
+FROM ubuntu:latest
 
 RUN apt-get update && apt-get upgrade -y \
 	&& DEBIAN_FRONTEND=noninteractive apt-get install -y tzdata \

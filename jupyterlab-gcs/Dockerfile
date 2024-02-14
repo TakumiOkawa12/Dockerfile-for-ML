@@ -21,6 +21,6 @@ RUN pip install -U pip \
 	&& rm -r /tmp/requirements.txt
 
 WORKDIR /work
-EXPOSE 8888
+EXPOSE 3333
 
 CMD ["jupyter-lab", "--ip=0.0.0.0", "--LabApp.token=''", "--no-browser", "--allow-root", "--notebook-dir='/work'"]

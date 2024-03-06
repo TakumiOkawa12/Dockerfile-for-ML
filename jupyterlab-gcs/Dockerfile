@@ -14,6 +14,10 @@ RUN apt-get update && apt-get upgrade -y \
 
 RUN echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] http://packages.cloud.google.com/apt cloud-sdk main" | tee -a /etc/apt/sources.list.d/google-cloud-sdk.list && curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key --keyring /usr/share/keyrings/cloud.google.gpg add - && apt-get update -y && apt-get install google-cloud-sdk -y
 
+# echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] http://packages.cloud.google.com/apt cloud-sdk main" | tee -a /etc/apt/sources.list.d/google-cloud-sdk.list : gcloud CLIの配布URLをパッケージソーづとして追加
+# curl https://packages.cloud.google.com/apt/doc/apt-key.gpg : Google cloudの公開鍵のインポート
+
+
 COPY requirements.txt /tmp/requirements.txt
 
 RUN pip install -U pip \
